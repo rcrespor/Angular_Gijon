@@ -1,0 +1,37 @@
+<div class="container main">
+    <div class="row">
+        <div class="col text-center">
+           
+          <div class="card">
+            <div class="card-header">
+              Lista de tareas
+            </div>
+            <div class="card-body">
+
+              <div class="form-group">
+               
+                <input type="text"
+                  class="form-control" name="tarea" id="tarea"
+                   placeholder="Escribe una tarea"
+                   [(ngModel)]="sTarea">
+                   <button (click) = "addTarea()">Añadir</button>
+          
+              </div>   
+              
+              
+            </div>
+            <div class="card-footer text-muted">
+              <h3 *ngIf="aTareas.length > 0">Tareas</h3>
+              <ul>
+                <li *ngFor="let aTarea of aTareas; let i = index">
+                  <p>{{i+1}} - {{aTarea}}</p>
+
+                </li>
+                </ul>
+            </div>
+          </div>
+
+        </div>
+        
+    </div>
+</div>
