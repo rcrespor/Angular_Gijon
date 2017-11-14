@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BindingComponent } from './binding/binding.component';
 import { FormsModule } from '@angular/forms';
-import { ExpresionesComponent } from './expresiones/expresiones.component';
-import { LocalComponent } from './local/local.component';
+import { PadreComponent } from './padre/padre.component';
+import { HijoComponent } from './hijo/hijo.component';
+
 
 @NgModule({
   imports: [
@@ -12,13 +13,13 @@ import { LocalComponent } from './local/local.component';
   ],
   declarations: [
     BindingComponent,
-    ExpresionesComponent,
-    LocalComponent
+    PadreComponent,
+    HijoComponent
   ],
   exports: [
     BindingComponent,
-    ExpresionesComponent,
-    LocalComponent
+    PadreComponent,
+    HijoComponent
   ]
 })
 export class MainModule { }
