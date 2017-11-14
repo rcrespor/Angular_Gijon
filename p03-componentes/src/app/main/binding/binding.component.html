@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <div class="card">
+        <div class="card-header">
+          Binding
+        </div>
+        <div class="card-body">
+
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text"
+                class="form-control" name="nombre" id="nombre"
+                [(ngModel)]="sNombre">
+            </div>
+          
+            <div class="form-group">
+              <button type="button" class="btn"
+              (click)="btnBorrar()">Borrar</button>
+            </div>
+
+
+        </div>
+        <div class="card-footer text-muted">
+          Hola {{sNombre}}
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
