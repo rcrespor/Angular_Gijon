@@ -1,0 +1,33 @@
+<div class="container text-center mb-2">
+  <div class="row">
+    <div class="col">
+
+<div class="card">
+  <div class="card-header">
+    Contador
+  </div>
+  <div class="card-body">
+      <span [ngClass] = "colores">
+          {{contador}}
+        </span>
+        <div>
+            <div>
+              <label for="incremento">Incremento</label>
+            <input id="incremento" name="incremento" type="number" [(ngModel)] = "nIncremento" placeholder="Incremento"/>
+            </div>
+        <button type="button" class="btn btn-primary"
+        (click)="decrementar()">restar</button>
+        
+          <button type="button" class="btn btn-primary"
+         (click)="incrementar()">sumar</button>
+        </div>
+      </div>
+  </div>
+
+</div>
+
+
+      
+    
+  </div>
+</div>
