@@ -1,0 +1,35 @@
+<div class="container mb-2">
+  <div class="row aling-items-center">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          Pipes
+        </div>
+        <div class="card-body">
+          Tenemos diversas variables
+        </div>
+        <div class="card-footer text-muted">
+         <p class="text-center"> string {{sNombre}} </p>
+         <p> pipe lowercase: {{sNombre | lowercase}} </p>
+         <p> pipe uppercase: {{sNombre | uppercase}} </p>
+         <p> pipe titlecase: {{sNombre | titlecase}} </p>
+         <p class="text-center"> number {{nValor}} </p>
+         <p> pipe number {{nValor | number: '3.2-2'}} </p>
+         <p> pipe percent {{nValor | percent}} </p>
+         <p class="text-center"> number {{nPrecio}} </p>
+         <p> pipe currency: {{nPrecio | currency}} </p>
+         <p class="text-center"> date {{dFecha}} </p>
+         <p> pipe date: {{dFecha | date}} </p>
+         <p> pipe date: {{dFecha | date: 'dd/MM/yyyy'}} </p>
+         <p> pipe date: {{dFecha | date: 'fullDate'}} </p>
+         <p class="text-center"> Object {{oDato}} </p>
+         <p>pipe json: {{oDato | json}}</p>
+         <p>pipe json con etiqueta "pre": </p><pre>{{oDato | json}}</pre>
+
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>

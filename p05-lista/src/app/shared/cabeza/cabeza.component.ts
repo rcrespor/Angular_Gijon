@@ -16,7 +16,7 @@ export class CabezaComponent implements OnInit {
   ngOnInit() {
     // por convención se utiliza esto para inicializar
     // pq ya esta todo enchufado en el dom
-    this.sTitulo = 'Directivas';
+    this.sTitulo = 'Directivas y pipes';
   }
 
 }

@@ -5,6 +5,7 @@ import { ListaComponent } from './lista/lista.component';
 import { ListaV4Component } from './lista-v4/lista-v4.component';
 import { FormsModule } from '@angular/forms';
 import { ContadorComponent } from './contador/contador.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ContadorComponent } from './contador/contador.component';
     MainComponent,
     ListaComponent,
     ListaV4Component,
-    ContadorComponent
+    ContadorComponent,
+    PipesComponent
 
   ],
   exports: [
