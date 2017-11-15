@@ -1,17 +1,18 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Impresion, Impresora, Departamento  } from '../../models/models';
+
 
 @Component({
   selector: 'app-form-vista',
   templateUrl: './form-vista.component.html',
-  styleUrls: ['./form-vista.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./form-vista.component.css']
 })
 export class FormVistaComponent implements OnInit {
 
   ordenImpresion: Impresion;
   impresoras: Array<Impresora>;
   departamentos: Array<Departamento>;
+  @ViewChild('form1') formVista: any;
 
   constructor() { }
 
@@ -36,6 +37,17 @@ export class FormVistaComponent implements OnInit {
         {codigo: 'SS', nombre: 'Sistemas'}
       ];
 
+      console.log(this.formVista);
+
+  }
+
+  enviar() {
+    console.log(this.formVista);
+  }
+
+  resetForm() {
+    this.formVista.reset();
+    console.log(this.formVista);
   }
 
 }
