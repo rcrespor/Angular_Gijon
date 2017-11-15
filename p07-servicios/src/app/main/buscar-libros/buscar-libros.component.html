@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          Busqueda de libros simulada
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="clave">Clave de búsqueda</label>
+            <input type="text"
+             name="clave" id="clave" class="form-control" 
+             [(ngModel)]="sClave">
+            
+          </div>
+          <button type="button" name="buscar" 
+          id="buscar" class="btn btn-primary" 
+          (click)="btnBuscar()">buscar</button>
+        </div>
+       
+        <ul class="list-group">
+          <li *ngFor="let libro of aLibros" 
+          class="list-group-item disabled">{{libro}}</li>
+        </ul>
+
+        <div class="card-footer text-muted">
+          Footer
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
