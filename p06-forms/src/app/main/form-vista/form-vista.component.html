@@ -1,0 +1,89 @@
+<form>
+    <!--Text-->  
+    <fieldset>
+        <legend>Datos del Usuario</legend>
+        <div class="form-group row">
+            <!--Etiqueta / Campo "Nombre"-->						
+            <label for="name" class="col-3">Nombre</label>
+            <input type="text" class="form-control col-9" 
+            name="name" id="name" required
+            placeholder="Indica tu nombre (es obligatorio)"
+            [(ngModel)] = "ordenImpresion.usuario.nombre">
+        </div>
+
+        <div class="form-group row">
+            <!--Etiqueta / Campo "Apellidos"-->
+            <label for="lastname"  class="col-3">Apellidos</label>
+            <input type="text" class="form-control col-9"
+            id="lastname" name="lastname" required
+            placeholder="Indica tu apellido (es obligatorio)"
+            [(ngModel)] = "ordenImpresion.usuario.apellidos">
+        </div>      
+        <div class="form-group row">
+            <!--Etiqueta / Campo "Telefono"-->
+            <label for="phoneNumber" class="col-3">Teléfono</label>
+            <input type="text" class="form-control col-9"
+            id="phoneNumber" name="phoneNumber"
+            placeholder="Indica tu teléfono (es obligatorio)"
+            [(ngModel)] = "ordenImpresion.usuario.telefono"> 
+        </div>
+    </fieldset>  
+
+    <!--Radio-Buttos-->
+    <fieldset class="form-group">
+        <legend>Selecciona una Impresora</legend>
+            <div class="form-check"
+            *ngFor = "let impresora of impresoras">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input"
+                        name ="printer" [id]="impresora.codigo" 
+                        [value]="impresora"
+                        [(ngModel)] = "ordenImpresion.impresora">
+                        {{impresora.nombre}}
+                </label>
+            </div>   
+    </fieldset>
+    <!--Checkbox-->   
+    <fieldset class="form-group"> 
+        <legend>Seleción de opciones</legend>
+        <div class="form-check">
+            <label class="form-check-label">
+            <input type="checkbox"  class="form-check-input"
+                id="color" name="color"
+                [(ngModel)] = "ordenImpresion.isColor">
+                Imprimir en color
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+            <input type="checkbox"  class="form-check-input"
+                id="tono" name="tono"
+                [(ngModel)] = "ordenImpresion.isClaro"> 
+                Tono claro</label>			
+        </div>
+    </fieldset>
+    <!--Select/options --> 
+    <fieldset class="form-group"> 
+        <legend>Departameto</legend>
+        <div class="form-group row">
+            <select class="form-control"
+                id="select" name="select"
+                [(ngModel)] = "ordenImpresion.departamento"> 
+                <option *ngFor ="let dpto of departamentos" [ngValue]="dpto">
+                  {{dpto.nombre}}
+                </option>
+               
+            </select>
+        </div>
+    </fieldset>
+    <div class="form-group row">
+        <button type="submit" class="btn btn-primary mr-2">
+            Enviar</button>
+        <button type="button" class="btn btn-primary">
+            Borrar</button>
+    </div>
+</form>
+
+<pre>
+  {{ordenImpresion | json}}
+</pre>
